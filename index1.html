@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <link href="qq.css" rel="stylesheet"/>
+    <script src="drag.js"></script>
+</head>
+<body>
+    <div class="loginPanel" id="loginPanel">
+        <div style="position:relative; z-index: 1;">
+            <div class="ui_boxyClose" id="ui_boxyClose"></div>
+        </div>
+        <div class="login_logo_webqq"><span style="font:bold 22px black,'Arial'; margin-left:80px; margin-top: 5px">Login</span></div>
+
+        <div class="inputs">
+            <!--autocomplete : on 根据之前输入的值自动完成拼写
+                    ime-mode: disabled 禁止用户使用输入法中文符号等( IE 有效)
+                    onfocus, onblur : 聚焦失焦事件
+                    tabindex:　当使用tab键切换元素的先后顺序。值越小优先级越高-->
+            <div class="sign-input"><span>&nbsp;&nbsp;Account:&nbsp;&nbsp;</span><span><input autocomplete="on" name="u" id="u" type="text" style="ime-mode: disabled" class="input01" tabindex="1" value="QQ number or Email address" onfocus="if(value=='QQ number or Email address'){value=''}" onblur="if(value==''){value='QQ number or Email address';}"/></span></div>
+            <div class="sign-input"><span>Password:&nbsp;</span><span><input name="p" id="p" maxlength="16" type="password" class="input01" tabindex="2"></span></div>
+        </div>
+
+        <div class="bottomDiv">
+            <div class="btn" style="float:left"></div>
+            <div>
+                <!--设置多个class将该元素同时赋予多个样式，若冲突以后者为准-->
+                <div id="loginState" class="login-state-trigger login-state-trigger2 login-state" title="State for me">
+                    <div id="loginStateShow" class="login-state-show online">State</div>
+                    <div class="login-state-down">down</div>
+                    <div class="login-state-txt" id="login2qq_state_txt">Online</div>
+                    <ul id="loginStatePanel" class="statePanel login-state" style="display: none">
+                        <li id="online" class="statePanel_li">
+                            <div class="stateSelect_icon online"></div>
+                            <div class="stateSelect_text">Online</div>
+                        </li>
+                        <li id="callme" class="statePanel_li">
+                            <div class="stateSelect_icon callme"></div>
+                            <div class="stateSelect_text">Available</div>
+                        </li>
+                        <li id="away" class="statePanel_li">
+                            <div class="stateSelect_icon away"></div>
+                            <div class="stateSelect_text">Away</div>
+                        </li>
+                        <li id="busy" class="statePanel_li">
+                            <div class="stateSelect_icon busy"></div>
+                            <div class="stateSelect_text">Busy</div>
+                        </li>
+                        <li id="silent" class="statePanel_li">
+                            <div class="stateSelect_icon silent"></div>
+                            <div class="stateSelect_text">Unavailable</div>
+                        </li>
+                        <li id="hidden" class="statePanel_li">
+                            <div class="stateSelect_icon hidden"></div>
+                            <div class="stateSelect_text">Hidden</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>
